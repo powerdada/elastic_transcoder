@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *.gem
 *.rbc
 .bundle
@@ -16,7 +15,6 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
-=======
 *.rbc
 *.sassc
 .sass-cache
@@ -33,4 +31,3 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
->>>>>>> 40307a99c99beb6f3f786ab16f68e2f0481b12c4
