@@ -5,3 +5,6 @@ module ElasticTranscoder
     "hello world"
   end
 end
+
+require "elastic_transcoder/utilities"
+require "elastic_transcoder/pipeline"

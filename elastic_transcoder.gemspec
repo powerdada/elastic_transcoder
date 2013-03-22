@@ -14,4 +14,8 @@ Gem::Specification.new do |gem|
   gem.name          = "elastic_transcoder"
   gem.require_paths = ["lib"]
   gem.version       = ElasticTranscoder::VERSION
+  
+  s.add_dependency "httparty"
+  s.add_dependency "multi_json"
+  s.add_dependency "multi_xml"
 end
