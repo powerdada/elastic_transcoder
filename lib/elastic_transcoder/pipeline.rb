@@ -6,9 +6,9 @@ module ElasticTranscoder
       @utilities = ElasticTranscoder::Utilities.new
     end
     
-    def create_pipeline
+    def create_pipeline name, input_bucket, output_bucket, role
       action = "pipelines"
-      creation_params = "{'Name':'pipeline name','InputBucket':'dada-development','OutputBucket':'dada-development','Role':'arn:aws:iam::543035455426:role/Elastic_Transcoder_Default_Role','Notifications':{'Progressing':'','Completed':'','Warning':'','Error':'arn:aws:sns:us-east-1:111222333444:ETS_Errors'}}"
+      creation_params = '{"Name":"'+name+'","InputBucket":"'+input_bucket+'","OutputBucket":"'+output_bucket+'","Role":"'+role+'","Notifications":{"Progressing":"","Completed":"","Warning":"","Error":"arn:aws:sns:us-east-1:111222333444:ETS_Errors"}}'
       headers = @utilities.initialize_headers action, {:method=>"POST", :payload=>creation_params}
       url = @utilities.build_url action
       response = @utilities.execute_post url, headers, creation_params
@@ -39,7 +39,5 @@ module ElasticTranscoder
 end
 
 pipe = ElasticTranscoder::Pipeline.new
-#puts pipe.pipelines
-#puts pipe.pipeline "1363791455355-d92773"
-#puts pipe.delete_pipeline "1363791455355-d92123" #fake Id
-puts pipe.create_pipeline
+puts pipe.pipelines
+

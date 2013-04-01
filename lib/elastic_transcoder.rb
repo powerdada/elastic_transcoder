@@ -1,8 +1,9 @@
 require "elastic_transcoder/version"
 
 module ElasticTranscoder
-  def self.hello
-    "hello world"
+  
+  def self.configure(&block)
+      ElasticTranscoder::Transcoder::Base.configure(&block)
   end
 end
 
