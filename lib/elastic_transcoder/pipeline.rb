@@ -1,5 +1,5 @@
 module ElasticTranscoder
-  load 'utilities.rb'
+  require 'elastic_transcoder/utilities.rb'
   class Pipeline
   
     def initialize
@@ -38,6 +38,7 @@ module ElasticTranscoder
   end
 end
 
-pipe = ElasticTranscoder::Pipeline.new
-puts pipe.pipelines
+#pipe = ElasticTranscoder::Pipeline.new
+#puts pipe.pipelines
+
 

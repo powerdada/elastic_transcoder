@@ -1,7 +1,5 @@
 require "elastic_transcoder/transcoder/configuration"
-require "elastic_transcoder/authentication"
-require "elastic_transcoder/utilities"
-require "elastic_transcoder/pipeline"
+require "elastic_transcoder/transcoder/authentication"
 
 module ElasticTranscoder
 
@@ -11,7 +9,17 @@ module ElasticTranscoder
   module Transcoder 
     class Base
       include ElasticTranscoder::Transcoder::Configuration
-      include ElasticTranscoder::Authentication
+      include ElasticTranscoder::Transcoder::Authentication
+      
+      def self.amazon_credentials(value=nil)
+          @amazon_credentials = value if value
+          return @amazon_credentials
+      end
+  
+      def self.amazon_credentials=(value)
+        @amazon_credentials = value
+      end
+      
     end
   end
 end
