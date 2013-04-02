@@ -11,3 +11,4 @@ end
 
 require "elastic_transcoder/utilities"
 require "elastic_transcoder/pipeline"
+require "elastic_transcoder/jobs"

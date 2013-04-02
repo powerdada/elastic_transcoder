@@ -1,5 +1,5 @@
 module ElasticTranscoder
-  load 'utilities.rb'
+  require "elastic_transcoder/utilities"
   class Jobs
   
     def initialize
@@ -46,5 +46,3 @@ module ElasticTranscoder
   
   end
 end
-
-job = ElasticTranscoder::Jobs.new
