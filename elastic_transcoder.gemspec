@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["ronald05arias@gmail.com"]
   gem.description   = %q{This gem is intended to manage the elastic transcoder services of Amazon Web Services}
   gem.summary       = %q{Frontend for Amazon Elastic Transcoding }
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/ronald05arias/elastic_transcoder"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
